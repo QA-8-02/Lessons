@@ -1,0 +1,257 @@
+<html lang="he">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=9" />
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+        }
+
+        .container {
+            direction: rtl;
+            text-align: center;
+            width: 613px;
+            margin: auto;
+            padding-top: 20px;
+            position: relative;
+        }
+
+        h1 {
+            direction: rtl;
+            font-size: 20px;
+        }
+
+        .instructions {
+            text-align: right;
+            font-size: 15px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .slidecontainer {
+            margin-top: 50px;
+            position: relative;
+            width: 450px;
+            float: right;
+        }
+
+        .slidecontainer .placeholder {
+            position: absolute;
+            top: 0;
+            left: 40%;
+            font-size: 14px;
+        }
+
+        .textDiv1,
+        .textDiv2 {
+            direction: rtl;
+            text-align: right;
+            overflow: auto;
+            float: right;
+            width: 430px;
+            padding-right: 20px;
+        }
+
+        .textDiv1 {
+            margin-top: 30px;
+        }
+
+        .textDiv2 {
+            margin-top: 10px;
+        }
+
+        #year,
+        .label {
+            float: right;
+            padding: 5px;
+        }
+
+        #year {
+            direction: ltr;
+        }
+
+        #jquerySlider {
+            width: 400px;
+            margin: auto;
+        }
+
+        #sliderlabel {
+            top: -5px;
+            margin-top: -25px;
+            position: absolute;
+            font-size: 13px;
+            width: 35px;
+            padding: 3px 5px;
+            background-color: #e9e9e9;
+            color: blue;
+        }
+
+        #jquerySlider {
+            border: 0;
+        }
+
+        #jquerySlider .ui-slider-handle {
+            border-radius: 18px;
+            cursor: pointer;
+            height: 30px;
+            width: 30px;
+            top: -6px;
+            margin-left: -9px;
+            border: 0px solid white;
+            background-image: none;
+            background-color: blue;
+        }
+
+        #jquerySlider.ui-slider::before {
+            content: "";
+            position: absolute;
+            right: -4%;
+            left: -4%;
+            background: #e9e9e9;
+            height: 18px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .resultTitle {
+            padding-bottom: 10px;
+        }
+
+        .categories {
+            margin-top: 30px;
+            width: 150px;
+            text-align: right;
+            float: right;
+        }
+
+        .cat1 {
+            color: violet;
+        }
+
+        .cat2 {
+            color: blue;
+        }
+
+        .cat3 {
+            color: red;
+        }
+
+        .cat4 {
+            color: purple;
+        }
+
+        .cat5 {
+            color: grey;
+        }
+
+        .cat6 {
+            color: orange;
+        }
+
+        .cat7 {
+            color: cyan;
+        }
+
+        .cat8 {
+            color: green;
+        }
+
+        .cat9 {
+            color: yellow;
+        }
+
+        @media (max-width: 991px) {
+            .instructions {
+                margin-right: 20px;
+            }
+
+            .categories {
+
+                width: 21%;
+                margin-right: 20px;
+
+            }
+
+            .slidecontainer {
+                width: 75%;
+            }
+
+            input[type=checkbox] {
+                -ms-transform: scale(2);
+                /* IE */
+                -moz-transform: scale(2);
+                /* FF */
+                -webkit-transform: scale(2);
+                /* Safari and Chrome */
+                -o-transform: scale(2);
+                /* Opera */
+                margin-left: 15px;
+            }
+
+            .cat1,
+            .cat2,
+            .cat3,
+            .cat4,
+            .cat5,
+            .cat6,
+            .cat7,
+            .cat8,
+            .cat9 {
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+        }
+    </style>
+    <script src="js.js"></script>
+</head>
+
+<body>
+    
+
+    <div class="container">
+        <div class="instructions">הוראות:<br><br>תפענחו מה האפליקציה למטה עושה ותמצאו כמה באגים שאתם יכולים (באגים זה
+            תקלות: איפה שהאפליקציה לא עושה את מה שהיא אמורה לעשות או איפה היא לא עושה את זה טוב או נכון)</div>
+        <div class="categories">
+            <div class="cat1"><input class="chk" type="checkbox" value="1" checked>קומדיה</div>
+            <div class="cat2"><input class="chk" type="checkbox" value="2">דרמה</div>
+            <div class="cat3"><input class="chk" type="checkbox" value="3">אקשן</div>
+            <div class="cat4"><input class="chk" type="checkbox" value="4">מתח</div>
+            <div class="cat5"><input class="chk" type="checkbox" value="5">היסטוריה</div>
+            <div class="cat6"><input class="chk" type="checkbox" value="6">ילדים</div>
+            <div class="cat7"><input class="chk" type="checkbox" value="7">מד"ב</div>
+            <div class="cat8"><input class="chk" type="checkbox" value="8">רומנטיקה</div>
+            <div class="cat9"><input class="chk" type="checkbox" value="9">מוסקלי</div>
+            <br /><br />
+        </div>
+        <div class="slidecontainer">
+            <div id="jquerySlider">
+                <div id="sliderlabel"></div>
+            </div>
+            <div class="placeholder">שנה</div>
+        </div>
+        <div class="textDiv1">
+            <div class="label">שנה:</div><input type="text" id="year">
+        </div>
+        <div class="textDiv2">
+        </div>
+        <div class="instructions" style="position: fixed; top: 460px; border: 1px solid black; text-align: center; width: 95px;">
+            תוצאות:
+            <p>0-2: חלש</p>
+            <p>3-4: טוב</p>
+            <p>5-7: מצויין</p>
+            <p>8+: מקצוען</p>
+        </div>
+        Hi
+    </div>
+    <br>
+</body>
+
+</html>
