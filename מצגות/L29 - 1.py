@@ -83,23 +83,23 @@ import random
 
 # הגדרת Dictionary
 
-car = {
-    "brand": "Ford",
-    "model": "Mustang",
-    "year": 1964,
-    "new": False
-    }
-for x in car:
-    print(x, "=", car[x])
+# car = {
+#     "brand": "Ford",
+#     "model": "Mustang",
+#     "year": 1964,
+#     "new": False
+#     }
+# for x in car:
+#     print(x, "=", car[x])
 
-car["color"] = "white"
+# car["color"] = "white"
 
-print()
-for x in car:
-    print(x, "=", car[x])
+# print()
+# for x in car:
+#     print(x, "=", car[x])
 
-car.update({"year": 2000})
+# car.update({"year": 2000})
 
-print()
-for x in car:
-    print(x, "=", car[x])
+# print()
+# for x in car:
+#     print(x, "=", car[x])

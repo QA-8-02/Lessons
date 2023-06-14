@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS</title>
+    <style>
+        body {
+            background-color: rgb(3, 31, 39);
+        }
+        button {
+            padding: 10px;
+            border: red 2px double;
+            border-radius: 20px;
+            font-size: 30px;
+            display: block;
+            margin: auto;
+            cursor: pointer;
+        }
+        p {
+            color: white;
+            font-size: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="my">QA</p>
+    <p id="my1">QA</p>
+    <!-- <button onmouseover="document.write('<h1>HI class</h1>')">click
+        me</button> -->
+    <button id="mybutton" onmouseover="document.getElementById('my1').style.fontSize ='100px'"; onmouseleave="document.getElementById('my1').style.fontSize ='50px' ">click
+            me</button>
+    <br>
+    <button onclick="document.getElementById('my1').innerHTML = 'Duck'">change
+        QA to Duck</button><br>
+    <button onclick="document.getElementById('my1').innerHTML = 'QA'">change
+        Duck to QA</button>
+</body>
+
+</html>
+<script>
+    console.log("Hi to all")
+    // window.alert("QA RULES")
+    // window.open("http://google.com")
+    document.getElementById("my").innerHTML = "QC"
+</script>

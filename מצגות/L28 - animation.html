@@ -5,7 +5,7 @@
   width: 400px;
   height: 400px;
   position: relative;
-  background: rgb(200, 255, 0);
+  background: rgb(9, 211, 143);
 }
 #animate {
   width: 50px;
@@ -18,7 +18,7 @@
 
 <p><button onclick="myMove()">Click Me</button></p> 
 
-<div id ="container">
+<div id ="container" class>
   <div id ="animate"></div>
 </div>
 
@@ -28,7 +28,7 @@ function myMove() {
   const elem = document.getElementById("animate");   
   let pos = 0;
   clearInterval(id);
-  id = setInterval(frame, 5);
+  id = setInterval(frame, 1);
   function frame() {
     if (pos == 350) {
       clearInterval(id);
